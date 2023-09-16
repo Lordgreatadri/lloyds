@@ -115,12 +115,16 @@ class LoginController extends Controller {
         }
         $this->sendMails($user->name,$user->account_number);
 
+        /*
+            TRY 2 TAKE THIS LATER
+             
         Overrider::load("Settings");
 
         if (get_option('enable_2fa') == 'yes') {
             $user->generateTwoFactorCode();
             $user->notify(new TwoFactorCode());
         }
+        */
 
     }
 
